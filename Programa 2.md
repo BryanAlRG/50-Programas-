@@ -5,7 +5,7 @@
 #No. control 22210345
 #Nombre del programa: Suma de 2 numeros
 #Descripcion de la actividad: suma 2 numeros naturales 
-
+~~
 .data
     prompt1:    .string "Ingrese primer número: "
     prompt2:    .string "Ingrese segundo número: "
