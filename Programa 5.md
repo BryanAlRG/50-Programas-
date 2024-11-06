@@ -1,8 +1,11 @@
 
 
+~~~~
 .data
-    prompt:     .string "Ingrese N: "
-    resultado:  .string "La suma de los primeros %d números es: %d\n"
+    prompt1:    .string "Ingrese dividendo: "
+    prompt2:    .string "Ingrese divisor: "
+    resultado:  .string "La división es: %d\n"
+    error_div:  .string "Error: División por cero\n"
     formato:    .string "%d"
 
 .text
@@ -13,39 +16,54 @@ main:
     // Guardar registros
     stp     x29, x30, [sp, #-16]!
 
-    // Mostrar prompt
-    adrp    x0, prompt
-    add     x0, x0, :lo12:prompt
+    // Mostrar primer prompt
+    adrp    x0, prompt1
+    add     x0, x0, :lo12:prompt1
     bl      printf
 
-    // Leer N
+    // Leer primer número
     sub     sp, sp, #16
     mov     x1, sp
     adrp    x0, formato
     add     x0, x0, :lo12:formato
     bl      scanf
-    ldr     w19, [sp]           // Guardar N en w19
+    ldr     w19, [sp]           // Guardar dividendo en w19
 
-    // Inicializar suma y contador
-    mov     w20, #0             // suma = 0
-    mov     w21, #1             // i = 1
+    // Mostrar segundo prompt
+    adrp    x0, prompt2
+    add     x0, x0, :lo12:prompt2
+    bl      printf
 
-loop:
-    // Sumar número actual
-    add     w20, w20, w21       // suma += i
-    add     w21, w21, #1        // i++
-    cmp     w21, w19            // comparar i con N
-    b.le    loop               // si i <= N, continuar loop
+    // Leer segundo número
+    mov     x1, sp
+    adrp    x0, formato
+    add     x0, x0, :lo12:formato
+    bl      scanf
+    ldr     w20, [sp]           // Guardar divisor en w20
+
+    // Verificar división por cero
+    cmp     w20, #0
+    b.eq    division_cero
+
+    // Realizar división
+    sdiv    w1, w19, w20        // w1 = w19 / w20
 
     // Mostrar resultado
-    mov     w1, w19             // primer argumento para printf (N)
-    mov     w2, w20             // segundo argumento para printf (suma)
     adrp    x0, resultado
     add     x0, x0, :lo12:resultado
     bl      printf
+    b       fin
 
+division_cero:
+    // Mostrar mensaje de error
+    adrp    x0, error_div
+    add     x0, x0, :lo12:error_div
+    bl      printf
+
+fin:
     // Limpiar y salir
     add     sp, sp, #16
     mov     w0, #0
     ldp     x29, x30, [sp], #16
     ret
+~~~
