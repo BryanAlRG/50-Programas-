@@ -62,3 +62,31 @@ fin:
     mov     w0, #0
     ldp     x29, x30, [sp], #16
     ret
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Asciinema 
+https://asciinema.org/a/gKaAsc4MNguYqYDJh2ZoRQqq6 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #python 
+    def main():
+    # Solicitar el número
+    n = int(input("Ingrese un número para calcular su factorial: "))
+
+    # Verificar si el número es negativo
+    if n < 0:
+        print("Error: El número debe ser positivo")
+    else:
+        # Calcular el factorial
+        factorial = 1
+        contador = 1
+
+        while contador <= n:
+            factorial *= contador
+            contador += 1
+
+        # Mostrar el resultado
+        print(f"El factorial de {n} es: {factorial}")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
+
