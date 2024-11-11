@@ -59,3 +59,5 @@ main:
     ldp     x29, x30, [sp], #16
     ret
 
+#Asciinema
+[![asciicast](https://asciinema.org/a/H5qWLs24tSNwXWdh5Qc3E36kM.svg)](https://asciinema.org/a/H5qWLs24tSNwXWdh5Qc3E36kM)
