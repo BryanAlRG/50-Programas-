@@ -58,3 +58,24 @@ main:
     mov     w0, #0
     ldp     x29, x30, [sp], #16
     ret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Asciinema 
+https://asciinema.org/a/tGgpgBQxIuYe7PjhLzZM7gpbt
+
+------------------------------------------------------------------------------------------------------------------------------------------
+def main():
+    # Solicitar el primer número
+    num1 = int(input("Ingrese primer número: "))
+
+    # Solicitar el segundo número
+    num2 = int(input("Ingrese segundo número: "))
+
+    # Realizar la multiplicación
+    multiplicacion = num1 * num2
+
+    # Mostrar el resultado
+    print(f"La multiplicación es: {multiplicacion}")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
