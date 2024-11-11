@@ -60,4 +60,24 @@ main:
     ret
 
 
+#Link Asciinema 
+https://asciinema.org/a/Ear5uarlhTftV5iyZLZwWYbdj
+
+#Programa en python
+def main():
+    # Solicitar el primer número
+    num1 = int(input("Ingrese primer número: "))
+
+    # Solicitar el segundo número
+    num2 = int(input("Ingrese segundo número: "))
+
+    # Realizar la resta
+    resta = num1 - num2
+
+    # Mostrar el resultado
+    print(f"La resta es: {resta}")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
 
