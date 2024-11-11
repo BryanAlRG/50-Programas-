@@ -48,3 +48,27 @@ loop:
     mov     w0, #0
     ldp     x29, x30, [sp], #16
     ret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Asciinema 
+https://asciinema.org/a/43b6sy3O9gUc8HodOVH3wMlgq 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#python
+def main():
+    # Solicitar el valor de N
+    N = int(input("Ingrese N: "))
+
+    # Inicializar suma y contador
+    suma = 0
+    i = 1
+
+    # Bucle para calcular la suma de los primeros N números
+    while i <= N:
+        suma += i
+        i += 1
+
+    # Mostrar el resultado
+    print(f"La suma de los primeros {N} números es: {suma}")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
