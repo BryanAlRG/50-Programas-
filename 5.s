@@ -67,3 +67,28 @@ fin:
     ldp     x29, x30, [sp], #16
     ret
 ~~~
+#Asciinema 
+https://asciinema.org/a/uZoxFmhCC4TSIUKq2rMkSsqBT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Python 
+def main():
+    # Solicitar el dividendo
+    dividendo = int(input("Ingrese dividendo: "))
+
+    # Solicitar el divisor
+    divisor = int(input("Ingrese divisor: "))
+
+    # Verificar división por cero
+    if divisor == 0:
+        print("Error: División por cero")
+    else:
+        # Realizar la división
+        division = dividendo // divisor  # División entera
+
+        # Mostrar el resultado
+        print(f"La división es: {division}")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
+
