@@ -65,3 +65,31 @@ mostrar_resultado:
     mov     w0, #0
     ldp     x29, x30, [sp], #16
     ret
+
+    ---------------------------------------------------------------------------------------
+    #Asciinema 
+    https://asciinema.org/a/VHNg1JDDFCONIKmc98CsTqcZT
+    -------------------------------------------------------------------------------------
+    #Python 
+    def invertir_cadena(cadena):
+    # Invertir la cadena
+    return cadena[::-1]
+
+def main():
+    # Solicitar al usuario ingresar una cadena
+    cadena = input("Ingrese una cadena (máx 100 caracteres): ")
+
+    # Validar la longitud
+    if len(cadena) > 100:
+        print("Error: La cadena no puede tener más de 100 caracteres.")
+        return
+
+    # Invertir la cadena
+    cadena_invertida = invertir_cadena(cadena)
+
+    # Mostrar el resultado
+    print(f"Cadena invertida: {cadena_invertida}")
+
+if __name__ == "__main__":
+    main()
+
