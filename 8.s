@@ -91,3 +91,28 @@ fin:
     mov     w0, #0
     ldp     x29, x30, [sp], #16
     ret
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Aciinema 
+https://asciinema.org/a/r5R7roOrfgpw6pKuKUzagXlDs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Python 
+def fibonacci(n):
+    if n <= 0:
+        print("Error: El número debe ser positivo")
+        return
+    
+    a, b = 0, 1  # Primeros dos números de Fibonacci
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b  # Actualizar los números de Fibonacci
+
+def main():
+    # Solicitar al usuario la cantidad de términos de Fibonacci
+    try:
+        n = int(input("Ingrese cantidad de términos de Fibonacci: "))
+        fibonacci(n)
+    except ValueError:
+        print("Error: Ingrese un número válido")
+
+if __name__ == "__main__":
+    main()
