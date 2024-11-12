@@ -75,3 +75,33 @@ fin:
     mov     w0, #0
     ldp     x29, x30, [sp], #16
     ret
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #Asciinema 
+    https://asciinema.org/a/dOn4ZTqk2t9r2AF5euXCbbdVT
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def es_primo(n):
+    if n <= 1:
+        print("Error: El número debe ser mayor que 1")
+        return
+
+    # Verificar si el número es primo
+    for divisor in range(2, int(n**0.5) + 1):  # Solo verificamos hasta la raíz cuadrada de n
+        if n % divisor == 0:
+            print(f"El número {n} no es primo")
+            return
+    
+    # Si no se encontró ningún divisor, es primo
+    print(f"El número {n} es primo")
+
+def main():
+    # Solicitar al usuario que ingrese un número
+    try:
+        numero = int(input("Ingrese un número para verificar si es primo: "))
+        es_primo(numero)
+    except ValueError:
+        print("Error: Ingrese un número válido")
+
+if __name__ == "__main__":
+    main()
+
