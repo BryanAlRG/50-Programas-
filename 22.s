@@ -1,3 +1,34 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Conversión de ASCII a entero
+#Python
+def ascii_to_int(s):
+    # Verificar si el número es negativo
+    negative = False
+    if s[0] == '-':
+        negative = True
+        s = s[1:]  # Eliminar el signo negativo
+
+    # Convertir la cadena a un número
+    result = 0
+    for char in s:
+        result = result * 10 + (ord(char) - ord('0'))
+
+    # Aplicar signo negativo si es necesario
+    if negative:
+        result = -result
+
+    return result
+
+if __name__ == "__main__":
+    # Ejemplo de uso
+    ascii_string = "-12345"  # Puedes cambiar este valor para probar
+    print(f"El número es: {ascii_to_int(ascii_string)}")
+
+#Arm 64
 .global ascii_to_int
 .type ascii_to_int, %function
 
@@ -35,3 +66,5 @@ done:
 positive:
     mov x0, x1             // Retornar resultado
     ret
+#Asciinema 
+https://asciinema.org/a/L6R1Z5VQFuTbnYZLuBfbDvMLl
