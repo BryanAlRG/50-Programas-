@@ -1,3 +1,29 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Conversión de hexadecimal a decimal
+#Python 
+def decimal_a_hexadecimal(decimal):
+    if decimal == 0:
+        return "0"
+    
+    hex_digits = "0123456789ABCDEF"
+    hex_result = ""
+    
+    while decimal > 0:
+        remainder = decimal % 16
+        hex_result = hex_digits[remainder] + hex_result
+        decimal //= 16
+    
+    return hex_result
+
+# Ejemplo de uso
+numero_decimal = int(input("Ingresa un número decimal: "))
+print(f"El número decimal {numero_decimal} en hexadecimal es: {decimal_a_hexadecimal(numero_decimal)}")
+
+#Arm
 .global _start
 .section .text
 
@@ -32,3 +58,6 @@ convert_loop:
 
 .section .data
     result: .quad 0
+
+#Asciinema 
+https://asciinema.org/a/aob9CFN3ala1bBBoyYRYUdUDq
