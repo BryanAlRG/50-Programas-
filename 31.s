@@ -1,3 +1,37 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Mínimo Común Múltiplo (MCM)
+#Python 
+# Función para calcular el GCD (Máximo Común Divisor)
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b  # Intercambia a y b, y calcula el resto
+    return a
+
+# Función para calcular el MCM (Mínimo Común Múltiplo)
+def lcm(a, b):
+    return abs(a * b) // gcd(a, b)
+
+# Función para ingresar datos y mostrar el resultado
+def main():
+    # Solicitar al usuario que ingrese dos números
+    a = int(input("Ingresa el primer número: "))
+    b = int(input("Ingresa el segundo número: "))
+    
+    # Calcular el MCM
+    result = lcm(a, b)
+    
+    # Mostrar el resultado
+    print(f"El Mínimo Común Múltiplo de {a} y {b} es: {result}")
+
+# Llamar a la función principal
+if __name__ == "__main__":
+    main()
+
+#Arm 
 .global lcm
 .type lcm, %function
 
@@ -30,3 +64,5 @@ gcd:
     b gcd
 gcd_done:
     ret
+#Asciinema 
+https://asciinema.org/a/PlS8CTiulbEsB7T0MI1oFEx6e
