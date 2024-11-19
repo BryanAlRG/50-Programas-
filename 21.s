@@ -1,3 +1,12 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Transposición de una matriz	
+#Python 
+
+#Arm
 .global matrix_transpose
 .type matrix_transpose, %function
 
@@ -37,3 +46,6 @@ next_row:
     
 trans_done:
     ret
+
+#Asciinema 
+https://asciinema.org/a/ZGkEXMsLedABHCMemZKMS9OrE
