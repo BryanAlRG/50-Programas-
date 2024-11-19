@@ -1,5 +1,10 @@
-#Rodriguez Gomez Bryan Alejandro 22210345
-~~
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: 	Verificar si una cadena es palíndromo
+---------------------------------------------------------------------------------------------------------------------------------
 .data
     prompt:     .string "Ingrese una cadena: "
     resultado_palindrome: .string "La cadena es un palíndromo.\n"
