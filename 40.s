@@ -1,3 +1,22 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Convertir binario a decimal
+#Python 
+def binario_a_decimal(binario):
+    decimal = 0
+    for i in range(len(binario)):
+        bit = int(binario[i])  # Convertir el carácter a un entero (0 o 1)
+        decimal += bit * (2 ** (len(binario) - i - 1))  # Potencia de 2 por la posición
+    return decimal
+
+# Ejemplo de uso
+numero_binario = input("Ingresa un número binario: ")
+print(f"El número binario {numero_binario} en decimal es: {binario_a_decimal(numero_binario)}")
+
+#Arm
 // Conversión de Binario a Decimal en ARM64
 .global _start
 .section .text
@@ -28,3 +47,5 @@ convert_loop:
 
 .section .data
     result: .quad 0
+#Asciinema 
+https://asciinema.org/a/wmLuInmNqGcQEbyCfBz1prymt
