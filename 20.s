@@ -1,3 +1,61 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Multiplicación de matrices	
+#Python 
+def matrix_multiply(A, B):
+    # Verificar dimensiones de las matrices
+    rows_A = len(A)
+    cols_A = len(A[0])
+    rows_B = len(B)
+    cols_B = len(B[0])
+
+    if cols_A != rows_B:
+        raise ValueError("El número de columnas de A debe ser igual al número de filas de B")
+
+    # Inicializar la matriz resultado con ceros
+    result = [[0] * cols_B for _ in range(rows_A)]
+
+    # Multiplicación de matrices
+    for i in range(rows_A):  # Filas de A
+        for j in range(cols_B):  # Columnas de B
+            for k in range(cols_A):  # Columnas de A / Filas de B
+                result[i][j] += A[i][k] * B[k][j]
+
+    return result
+
+if __name__ == "__main__":
+    # Matrices de entrada (puedes cambiarlas)
+    A = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ]
+    B = [
+        [7, 8],
+        [9, 10],
+        [11, 12]
+    ]
+
+    print("Matriz A:")
+    for row in A:
+        print(row)
+
+    print("\nMatriz B:")
+    for row in B:
+        print(row)
+
+    # Multiplicar matrices
+    try:
+        result = matrix_multiply(A, B)
+        print("\nResultado (A * B):")
+        for row in result:
+            print(row)
+    except ValueError as e:
+        print(e)
+
+
 .global matrix_multiply
 .type matrix_multiply, %function
 
@@ -61,3 +119,6 @@ next_i:
 mult_done:
     ldp x29, x30, [sp], #16
     ret
+
+#Asciinema 
+https://asciinema.org/a/WlXe1ehqNpzv6mZ0wYLnkj2bs
