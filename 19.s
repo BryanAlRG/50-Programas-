@@ -1,3 +1,12 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Suma de matrices
+#Python 
+
+#Arm 
 .global matrix_add
 .type matrix_add, %function
 
@@ -27,3 +36,6 @@ loop:
     
 done:
     ret
+
+#Asciinema 
+https://asciinema.org/a/KDB0WnwKV5pJlDA1nv2DMUuDs
