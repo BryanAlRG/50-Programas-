@@ -78,5 +78,6 @@ main:
     ret
 
 #Asciinema
-[![asciicast](https://asciinema.org/a/H5qWLs24tSNwXWdh5Qc3E36kM.svg)](https://asciinema.org/a/H5qWLs24tSNwXWdh5Qc3E36kM)
+https://asciinema.org/a/H5qWLs24tSNwXWdh5Qc3E36kM
+https://asciinema.org/a/gAJz9WTDKcbQf20AZzocM5t6q
 
