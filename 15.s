@@ -168,3 +168,7 @@ found:
 not_found:
     mov x0, #-1         // Retornar -1
     ret
+
+    ----------------------------------------------------------------------------------------------
+    #Aciinema rec
+    https://asciinema.org/a/aRZRvkjDnOIaWFl2VKO2yaf5v
