@@ -5,6 +5,38 @@
 # No. control 22210345
 # Nombre del programa: Transposición de una matriz	
 #Python 
+def matrix_transpose(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+
+    # Crear la matriz transpuesta con dimensiones invertidas
+    transposed = [[0] * rows for _ in range(cols)]
+
+    # Realizar la transposición
+    for i in range(rows):
+        for j in range(cols):
+            transposed[j][i] = matrix[i][j]
+
+    return transposed
+
+if __name__ == "__main__":
+    # Matriz de entrada
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]
+
+    print("Matriz original:")
+    for row in matrix:
+        print(row)
+
+    # Transponer matriz
+    transposed = matrix_transpose(matrix)
+
+    print("\nMatriz transpuesta:")
+    for row in transposed:
+        print(row)
 
 #Arm
 .global matrix_transpose
