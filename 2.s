@@ -5,6 +5,24 @@
 #No. control 22210345
 #Nombre del programa: Suma de 2 numeros
 #Descripcion de la actividad: suma 2 numeros naturales 
+----------------------------------------------
+#En python 
+def main():
+    # Solicitar primer número
+    num1 = int(input("Ingrese primer número: "))
+
+    # Solicitar segundo número
+    num2 = int(input("Ingrese segundo número: "))
+
+    # Calcular la suma
+    suma = num1 + num2
+
+    # Mostrar resultado
+    print(f"La suma es: {suma}")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    main()
 ~~
 .data
     prompt1:    .string "Ingrese primer número: "
@@ -62,20 +80,3 @@ main:
 #Asciinema
 [![asciicast](https://asciinema.org/a/H5qWLs24tSNwXWdh5Qc3E36kM.svg)](https://asciinema.org/a/H5qWLs24tSNwXWdh5Qc3E36kM)
 
-#En python 
-def main():
-    # Solicitar primer número
-    num1 = int(input("Ingrese primer número: "))
-
-    # Solicitar segundo número
-    num2 = int(input("Ingrese segundo número: "))
-
-    # Calcular la suma
-    suma = num1 + num2
-
-    # Mostrar resultado
-    print(f"La suma es: {suma}")
-
-# Ejecutar el programa
-if __name__ == "__main__":
-    main()
