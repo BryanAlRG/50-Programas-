@@ -1,3 +1,33 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa:	Ordenamiento por selección		
+#Python 
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n - 1):  # Ciclo exterior
+        min_index = i
+        for j in range(i + 1, n):  # Buscar el mínimo
+            if arr[j] < arr[min_index]:
+                min_index = j
+        
+        # Hacer el intercambio si es necesario
+        if i != min_index:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+if __name__ == "__main__":
+    # Leer entrada del usuario
+    arr = input("Introduce los números separados por espacios: ").split()
+    # Convertir a enteros
+    arr = [int(x) for x in arr]
+
+    print("Arreglo original:", arr)
+    selection_sort(arr)
+    print("Arreglo ordenado:", arr)
+
+#Arm64
 .global selection_sort
 .type selection_sort, %function
 
@@ -44,3 +74,6 @@ next_outer:
     
 done:
     ret
+
+#Asciinema 
+https://asciinema.org/a/4w6Ntm4LU3Ejq02L2Uridpwlj
