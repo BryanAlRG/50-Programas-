@@ -1,5 +1,9 @@
-#RODRIGUEZ GOMEZ BRYAN ALEJANDRO
-
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: 	Invertir una cadena
 ~~~
 .data
     prompt:     .string "Ingrese una cadena (máx 100 caracteres): "
