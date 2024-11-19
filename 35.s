@@ -1,3 +1,45 @@
+# Instituto Tecnológico de Tijuana
+# Departamento de Sistemas y computación
+# Materia: Lenguajes de interfaz
+# Nombre del alumno: Rodríguez Gomez Bryan Alejandro 
+# No. control 22210345
+# Nombre del programa: Rotación de un arreglo (izquierda/derecha)
+#Python 
+# Función para rotar el arreglo a la izquierda
+def rotate_left(arr, n):
+    n = n % len(arr)  # Asegurarse de que n no sea mayor que el tamaño del arreglo
+    return arr[n:] + arr[:n]
+
+# Función para rotar el arreglo a la derecha
+def rotate_right(arr, n):
+    n = n % len(arr)  # Asegurarse de que n no sea mayor que el tamaño del arreglo
+    return arr[-n:] + arr[:-n]
+
+# Función principal para ingresar datos y mostrar el resultado
+def main():
+    # Solicitar al usuario que ingrese los elementos del arreglo
+    arr = list(map(int, input("Ingresa los elementos del arreglo separados por espacio: ").split()))
+    
+    # Solicitar la dirección y número de posiciones para rotar
+    direction = input("¿Quieres rotar a la izquierda o derecha? (izquierda/derecha): ").strip().lower()
+    n = int(input("¿Cuántas posiciones deseas rotar? "))
+
+    if direction == 'izquierda':
+        rotated_arr = rotate_left(arr, n)
+    elif direction == 'derecha':
+        rotated_arr = rotate_right(arr, n)
+    else:
+        print("Dirección inválida. Usa 'izquierda' o 'derecha'.")
+        return
+
+    # Mostrar el arreglo rotado
+    print(f"El arreglo rotado es: {rotated_arr}")
+
+# Llamar a la función principal
+if __name__ == "__main__":
+    main()
+
+#Ensamblador 
 .global array_rotate
 .type array_rotate, %function
 
@@ -59,3 +101,5 @@ reverse_section:
     
 rev_done:
     ret
+#Asciinema 
+https://asciinema.org/a/5Aw3Us7Q8VmkXmNGDKIMKkqYU
